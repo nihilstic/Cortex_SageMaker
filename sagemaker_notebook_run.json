@@ -1,0 +1,26 @@
+{
+  "name": "sagemaker_notebook_run",
+  "version": "1.0",
+  "url": "https://aws.amazon.com/fr/sagemaker/",
+  "author": "MF",
+  "license": "AGPL-V3",
+  "dataTypeList": ["hostname"],
+  "description": "Execute a parameterized notebook in SageMaker",
+  "baseConfig": "_config_sagemaker.json",
+  "config": {
+    "service": "Run_Notebook"
+  },
+  "configurationItems": [
+    {
+      "name": "key",
+      "description": "API key for SageMaker",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "command": "sagemaker.py",
+  "service_logo": {
+    "path": "SageMaker.png",
+    "caption": "logo"
+  }
+}
