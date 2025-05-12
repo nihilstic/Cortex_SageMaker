@@ -17,19 +17,12 @@ class SageMakerAnalyzer(Analyzer):
             self.error(str(e))
     
     def scan_hostname(self, hostname):
-        # process
+        # Code
+        print(hostname)
         if not self.api_key:
             raise ValueError("API key is missing.")
         return {"message": f"Processed hostname: {hostname}"}
+        # Code
 
 if __name__ == "__main__":
     SageMakerAnalyzer().run()
-
-    def process_hostname(self, hostname):
-        if not self.api_key:
-            raise ValueError("API key is missing.")
-        response = {
-            "hostname": hostname,
-            "message": f"API key used: {self.api_key}"
-        }
-        return response
